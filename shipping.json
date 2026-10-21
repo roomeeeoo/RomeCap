@@ -1,0 +1,14 @@
+{
+  "_AYUDA": "1) 'base' = lo que te cuesta a TI enviar (ej. Correos). Pon un numero en euros. Mientras sea null, esa zona no deja pagar. 2) 'recargo' 0.20 = se suma un 20% al cliente (no se muestra en la web). 3) En 'paises' puedes poner el coste base de un pais concreto (ej. \"US\": 18.5) y gana sobre la zona. 4) 'descuento' = rebaja total sobre el precio final de envio (se aplica una sola vez, en la web y en Stripe). Precio final = base x (1 + recargo) x (1 - descuento). Ahora 0.51 = dos rebajas seguidas del 30% (0.70 x 0.70 = 0.49 del precio original).",
+  "recargo": 0.20,
+  "descuento": 0.51,
+  "zonas": {
+    "gran-canaria": { "base": 0, "pay": "both", "days": "3 días - 1 semana" },
+    "canarias": { "base": 4, "pay": "card", "days": "3 - 10 días" },
+    "peninsula": { "base": 9, "pay": "card", "days": "15 - 30 días" },
+    "europa": { "base": 14, "pay": "card", "days": "15 - 30 días" },
+    "mundo": { "base": 20, "pay": "card", "days": "15 - 30 días" }
+  },
+  "paises": {},
+  "europa": ["AD","AL","AT","BA","BE","BG","CH","CY","CZ","DE","DK","EE","FI","FO","FR","GB","GI","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MC","MD","ME","MK","MT","NL","NO","PL","PT","RO","RS","SE","SI","SK","SM","UA","VA"]
+}
